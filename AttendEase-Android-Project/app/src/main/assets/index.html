@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101827"><meta name="description" content="Smart Attendance Management App">
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles.css">
+<title>AttendEase | Smart Attendance</title>
+</head>
+<body>
+<header class="topbar"><div class="brand"><span class="brandmark">A</span><div><b>AttendEase</b><small>Smart Attendance</small></div></div><div class="top-actions"><span id="connection" class="status">Local demo</span><button class="icon-btn" id="logoutBtn" title="Switch role">↪</button></div></header>
+<main id="app" class="shell">
+<section id="loginView" class="login-card">
+ <div class="eyebrow">WELCOME</div><h1>Attendance, made simple.</h1><p class="muted">Choose how you want to use the app.</p>
+ <div class="role-grid"><button class="role-card" data-role="student"><span>🎓</span><b>Student</b><small>View attendance and scan QR</small></button><button class="role-card" data-role="teacher"><span>🧑‍🏫</span><b>Teacher</b><small>Take and manage attendance</small></button><button class="role-card" data-role="admin"><span>⚙️</span><b>Admin</b><small>Manage subjects and users</small></button></div>
+ <p class="hint">Demo mode works on this device. Add your Firebase configuration to enable shared online data and accounts.</p>
+</section>
+<section id="dashboard" class="hidden">
+ <div class="welcome-row"><div><div class="eyebrow" id="roleLabel">STUDENT PORTAL</div><h1 id="welcomeTitle">Good morning</h1><p class="muted" id="todayLabel"></p></div><div class="avatar" id="avatar">S</div></div>
+ <nav class="tabs" id="tabs"></nav>
+ <div id="viewContent"></div>
+</section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+<script type="module" src="app.js"></script>
+</body></html>
